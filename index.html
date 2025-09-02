@@ -1,41 +1,76 @@
 <!DOCTYPE html>
-<html lang="nl">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mijn Website</title>
+  <title>Velacore Studios</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- Header -->
   <header>
-    <h1>Welkom op mijn website!</h1>
+    <div class="logo">Velacore Studios</div>
     <nav>
-      <a href="#">Home</a>
-      <a href="#">Over mij</a>
-      <a href="#">Contact</a>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#games">Games</a>
+      <a href="#contact">Contact</a>
     </nav>
   </header>
 
-  <main>
-    <section>
-      <h2>Over deze site</h2>
-      <p>
-        Dit is mijn eerste website via GitHub Pages. Hier kan ik mijn projecten, ideeën en meer delen.
-      </p>
-    </section>
+  <!-- Hero -->
+  <section id="home" class="hero">
+    <div class="hero-text">
+      <h1>Velacore Studios</h1>
+      <p>Creating Worlds. Crafting Stories. Inspiring Players.</p>
+      <a href="#games" class="btn">Explore Our Games</a>
+    </div>
+  </section>
 
-    <section>
-      <h2>Projecten</h2>
-      <ul>
-        <li>🌟 Project 1</li>
-        <li>🚀 Project 2</li>
-        <li>🎨 Project 3</li>
-      </ul>
-    </section>
-  </main>
+  <!-- About -->
+  <section id="about" class="content">
+    <h2>About Us</h2>
+    <p>
+      Velacore Studios is an independent game development studio with a passion for 
+      innovative gameplay and immersive storytelling. Our mission is to create games 
+      that go beyond entertainment – experiences that stay with players long after 
+      they put down the controller.
+    </p>
+  </section>
 
+  <!-- Games -->
+  <section id="games" class="content">
+    <h2>Our Games</h2>
+    <div class="game-grid">
+      <div class="game-card">
+        <img src="https://picsum.photos/400/200" alt="Game screenshot">
+        <h3>🌌 Project Nova</h3>
+        <p>A futuristic journey filled with action and mystery.</p>
+      </div>
+      <div class="game-card">
+        <img src="https://picsum.photos/400/201" alt="Game screenshot">
+        <h3>🧩 Mindshift</h3>
+        <p>A puzzle game that challenges the way you think.</p>
+      </div>
+      <div class="game-card">
+        <img src="https://picsum.photos/400/202" alt="Game screenshot">
+        <h3>⚔️ Shadow Quest</h3>
+        <p>An epic RPG adventure set in a dark fantasy world.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="content">
+    <h2>Contact</h2>
+    <p>Have questions or want to collaborate with us?</p>
+    <p>Email: <a href="mailto:info@velacorestudio.com">info@velacorestudio.com</a></p>
+    <p>Follow us on <a href="#">Twitter</a> | <a href="#">Instagram</a> | <a href="#">LinkedIn</a></p>
+  </section>
+
+  <!-- Footer -->
   <footer>
-    <p>&copy; 2025 Velacore studios</p>
+    <p>&copy; 2025 Velacore Studios | All Rights Reserved</p>
   </footer>
 </body>
 </html>
