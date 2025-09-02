@@ -10,13 +10,14 @@
   <!-- Header -->
   <header>
     <div class="logo">VELACORE</div>
-    <nav>
-      <a href="index.html">Home</a>
+    <nav id="nav">
+      <a href="index.html" class="active">Home</a>
       <a href="games.html">Games</a>
       <a href="about.html">About</a>
       <a href="careers.html">Careers</a>
       <a href="contact.html" class="btn">Contact</a>
     </nav>
+    <div class="menu-toggle" id="menu-toggle">☰</div>
   </header>
 
   <!-- Hero -->
@@ -28,8 +29,18 @@
     </div>
   </section>
 
+  <!-- Footer -->
   <footer>
     <p>&copy; 2025 Velacore Studios. All Rights Reserved.</p>
   </footer>
+
+  <script>
+    // Mobile menu toggle
+    const toggle = document.getElementById('menu-toggle');
+    const nav = document.getElementById('nav');
+    toggle.addEventListener('click', () => {
+      nav.classList.toggle('show');
+    });
+  </script>
 </body>
 </html>
