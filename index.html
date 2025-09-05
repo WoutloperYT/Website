@@ -14,26 +14,57 @@
   <!-- Header -->
   <header>
     <div class="logo">VELACORE</div>
-    <nav>
-      <a href="index.html">Home</a>
+    <nav id="nav">
+      <a href="index.html" class="active">Home</a>
       <a href="games.html">Games</a>
       <a href="about.html">About</a>
       <a href="careers.html">Careers</a>
       <a href="contact.html" class="btn">Contact</a>
     </nav>
+    <div class="menu-toggle" id="menu-toggle">☰</div>
   </header>
 
   <!-- Hero -->
   <section class="hero">
-    <div class="hero-text">
-      <h1>Velacore Studios</h1>
-      <p>Creating Worlds. Inspiring Players. Redefining Games.</p>
-      <a href="games.html" class="btn-primary">Explore Our Games</a>
+    <div class="hero-overlay">
+      <div class="hero-text">
+        <h1>Velacore Studios</h1>
+        <p>Creating Worlds. Inspiring Players. Redefining Games.</p>
+        <a href="games.html" class="btn-primary">Explore Our Games</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Section -->
+  <section class="featured">
+    <h2>Featured Games</h2>
+    <div class="featured-grid">
+      <div class="featured-card">
+        <img src="images/project-nova.jpg" alt="Project Nova">
+        <h3>Project Nova</h3>
+      </div>
+      <div class="featured-card">
+        <img src="images/mindshift.jpg" alt="Mindshift">
+        <h3>Mindshift</h3>
+      </div>
+      <div class="featured-card">
+        <img src="images/shadow-quest.jpg" alt="Shadow Quest">
+        <h3>Shadow Quest</h3>
+      </div>
     </div>
   </section>
 
   <footer>
     <p>&copy; 2025 Velacore Studios. All Rights Reserved.</p>
   </footer>
+
+  <script>
+    // Mobile nav toggle
+    const toggle = document.getElementById('menu-toggle');
+    const nav = document.getElementById('nav');
+    toggle.addEventListener('click', () => {
+      nav.classList.toggle('show');
+    });
+  </script>
 </body>
 </html>
