@@ -11,15 +11,17 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- Header -->
   <header>
     <div class="logo">VELACORE</div>
-    <nav>
+    <nav id="nav" aria-label="Main Navigation">
       <a href="index.html">Home</a>
       <a href="games.html">Games</a>
       <a href="about.html" class="active">About</a>
       <a href="careers.html">Careers</a>
       <a href="contact.html" class="btn">Contact</a>
     </nav>
+    <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu">☰</button>
   </header>
 
   <section class="about">
@@ -35,5 +37,15 @@
   <footer>
     <p>&copy; 2025 Velacore Studios. All Rights Reserved.</p>
   </footer>
+
+    <!-- Script -->
+  <script>
+    // Mobile nav toggle
+    const toggle = document.getElementById('menu-toggle');
+    const nav = document.getElementById('nav');
+    toggle.addEventListener('click', () => {
+      nav.classList.toggle('show');
+    });
+  </script>
 </body>
 </html>
