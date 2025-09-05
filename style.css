@@ -9,6 +9,7 @@ body {
   background: #0d0d0d;
   color: #f2f2f2;
   line-height: 1.6;
+  overflow-x: hidden;
 }
 
 /* Header */
@@ -16,11 +17,12 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #111;
+  background: rgba(17, 17, 17, 0.9);
   padding: 20px 40px;
   position: sticky;
   top: 0;
   z-index: 1000;
+  backdrop-filter: blur(10px);
 }
 .logo {
   font-size: 1.8rem;
@@ -31,17 +33,29 @@ header {
 nav {
   display: flex;
   align-items: center;
+  transition: 0.3s;
 }
 nav a {
   color: #f2f2f2;
   text-decoration: none;
   margin-left: 20px;
   font-weight: 500;
-  transition: color 0.3s;
+  position: relative;
 }
 nav a:hover,
 nav a.active {
   color: #00c3ff;
+}
+nav a::after {
+  content: '';
+  position: absolute;
+  left: 0; bottom: -5px;
+  width: 0%; height: 2px;
+  background: #00c3ff;
+  transition: width 0.3s;
+}
+nav a:hover::after {
+  width: 100%;
 }
 .btn {
   background: #00c3ff;
@@ -54,6 +68,7 @@ nav a.active {
 }
 .btn:hover {
   background: #0099cc;
+  transform: translateY(-2px);
 }
 
 /* Mobile Menu Toggle */
@@ -64,11 +79,11 @@ nav a.active {
   color: #fff;
 }
 
-/* Hero (Epic style) */
+/* Hero Section */
 .hero {
   position: relative;
   height: 100vh;
-  background: url('images/hero-bg.jpg') no-repeat center/cover;
+  background: url('images/hero-bg.jpg') no-repeat center/cover fixed;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -77,115 +92,101 @@ nav a.active {
   position: absolute;
   top: 0; left: 0;
   width: 100%; height: 100%;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.65);
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   padding: 20px;
+  animation: fadeIn 1.5s ease forwards;
 }
 .hero-text h1 {
-  font-size: 3.5rem;
+  font-size: 3.8rem;
   margin-bottom: 20px;
   color: #00c3ff;
+  animation: slideDown 1s ease forwards;
 }
 .hero-text p {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   margin-bottom: 30px;
+  opacity: 0.85;
+  animation: fadeIn 2s ease forwards;
 }
 .btn-primary {
   background: #00c3ff;
   color: #0d0d0d;
-  padding: 14px 28px;
+  padding: 14px 32px;
   border-radius: 6px;
   text-decoration: none;
   font-weight: bold;
-  transition: background 0.3s, transform 0.2s;
+  font-size: 1.1rem;
+  transition: 0.3s;
 }
 .btn-primary:hover {
   background: #0099cc;
   transform: scale(1.05);
+  box-shadow: 0 0 15px #00c3ff80;
 }
 
-/* Sections */
-section {
-  padding: 60px 20px;
+/* Featured Games Section */
+.featured {
+  padding: 80px 20px;
   text-align: center;
 }
 h2 {
-  font-size: 2rem;
-  margin-bottom: 25px;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
   color: #00c3ff;
-}
-
-/* Featured Games */
-.featured {
-  background: #0d0d0d;
 }
 .featured-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 25px;
-  margin-top: 30px;
+  gap: 30px;
 }
 .featured-card {
-  background: #1a1a1a;
-  border-radius: 10px;
+  background: linear-gradient(145deg, #1a1a1a, #111);
+  border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
-  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.7);
+  transition: transform 0.4s, box-shadow 0.4s;
 }
 .featured-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.8);
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 8px 18px rgba(0, 195, 255, 0.4);
 }
 .featured-card img {
   width: 100%;
   display: block;
+  transition: transform 0.4s;
+}
+.featured-card:hover img {
+  transform: scale(1.05);
 }
 .featured-card h3 {
-  margin: 15px 0;
-  color: #f2f2f2;
-}
-
-/* Games Grid (other page) */
-.games .game-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 25px;
-  margin-top: 30px;
-}
-.game-card {
-  background: #1a1a1a;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
-  transition: transform 0.3s;
-}
-.game-card:hover {
-  transform: translateY(-8px);
-}
-.game-card img {
-  width: 100%;
-  display: block;
-}
-.game-card h3 {
-  margin: 15px 0;
-}
-
-/* Careers */
-.careers {
-  background: #111;
+  margin: 20px 0;
+  color: #fff;
+  font-size: 1.3rem;
 }
 
 /* Footer */
 footer {
   background: #111;
   text-align: center;
-  padding: 20px;
+  padding: 25px;
   font-size: 0.9rem;
   color: #aaa;
-  margin-top: 40px;
+  margin-top: 60px;
+  border-top: 1px solid #222;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes slideDown {
+  from { transform: translateY(-30px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
 }
 
 /* Responsive */
@@ -196,11 +197,14 @@ footer {
     right: 0;
     background: #111;
     flex-direction: column;
-    width: 200px;
+    width: 220px;
     display: none;
+    padding: 20px;
+    border-left: 2px solid #00c3ff33;
   }
   nav.show {
     display: flex;
+    animation: fadeIn 0.5s ease forwards;
   }
   nav a, .btn {
     margin: 15px 0;
@@ -212,6 +216,9 @@ footer {
     padding: 15px 20px;
   }
   .hero-text h1 {
-    font-size: 2.2rem;
+    font-size: 2.4rem;
+  }
+  .hero-text p {
+    font-size: 1rem;
   }
 }
