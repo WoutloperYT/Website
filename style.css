@@ -76,7 +76,7 @@ nav a:hover::after {
   display: none;
   font-size: 1.8rem;
   cursor: pointer;
-  color: #fff;
+  color: #4b0d0d;
 }
 
 /* Hero Section */
