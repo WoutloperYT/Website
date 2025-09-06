@@ -17,7 +17,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: rgba(17, 17, 17, 0.9);
+  background: rgba(43, 43, 43, 0.9);
   padding: 20px 40px;
   position: sticky;
   top: 0;
@@ -25,10 +25,10 @@ header {
   backdrop-filter: blur(10px);
 }
 .logo {
-  font-size: 1.8rem;
+  font-size: 2rem;
   font-weight: bold;
-  letter-spacing: 2px;
-  color: #fff;
+  letter-spacing: 3px;
+  color: #c26262;
 }
 nav {
   display: flex;
@@ -44,21 +44,21 @@ nav a {
 }
 nav a:hover,
 nav a.active {
-  color: #00c3ff;
+  color: #3c73ffd3;
 }
 nav a::after {
   content: '';
   position: absolute;
   left: 0; bottom: -5px;
   width: 0%; height: 2px;
-  background: #00c3ff;
+  background: #2a66fd;
   transition: width 0.3s;
 }
 nav a:hover::after {
   width: 100%;
 }
 .btn {
-  background: #00c3ff;
+  background: #ff0000;
   padding: 8px 16px;
   border-radius: 4px;
   font-weight: bold;
@@ -67,7 +67,7 @@ nav a:hover::after {
   transition: 0.3s;
 }
 .btn:hover {
-  background: #0099cc;
+  background: #ff0000b0;
   transform: translateY(-2px);
 }
 
@@ -107,7 +107,7 @@ nav a:hover::after {
 .hero-text h1 {
   font-size: 3.8rem;
   margin-bottom: 20px;
-  color: #00c3ff;
+  color: #ff0000c9;
   animation: slideDown 1s ease forwards;
 }
 .hero-text p {
@@ -116,20 +116,63 @@ nav a:hover::after {
   opacity: 0.85;
   animation: fadeIn 2s ease forwards;
 }
+.games h2 {
+  font-size: 3.8rem;
+  margin-bottom: 20px;
+  color: #ff0000c9;
+  animation: slideDown 1s ease forwards;
+}
+.about h2 {
+  font-size: 3.8rem;
+  margin-bottom: 20px;
+  color: #ff0000c9;
+  animation: slideDown 1s ease forwards;
+}
+.careers h2 {
+  font-size: 3.8rem;
+  margin-bottom: 20px;
+  color: #ff0000c9;
+  animation: slideDown 1s ease forwards;
+}
+.contact h2 {
+  font-size: 3.8rem;
+  margin-bottom: 20px;
+  color: #ff0000c9;
+  animation: slideDown 1s ease forwards;
+}
+.game-grid p {
+  font-size: 1.5rem;
+  margin-bottom: 25px;
+  margin-left: 25px;
+  color: #ffffffc9;
+}
+.game-card p {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  margin-left: 5px;
+  color: #ffffffc9;
+}
+.game-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 3px;
+  margin-left: 5px;
+  color: #ffffffc9;
+}
 .btn-primary {
-  background: #00c3ff;
-  color: #0d0d0d;
+  background: #ff0000;
+  color: #000000;
   padding: 14px 32px;
   border-radius: 6px;
   text-decoration: none;
   font-weight: bold;
   font-size: 1.1rem;
   transition: 0.3s;
+  margin-top: 35px;
 }
 .btn-primary:hover {
-  background: #0099cc;
+  background: #ff0101bb;
   transform: scale(1.05);
-  box-shadow: 0 0 15px #00c3ff80;
+  box-shadow: 0 0 15px #ff000080;
 }
 
 /* Featured Games Section */
@@ -140,7 +183,7 @@ nav a:hover::after {
 h2 {
   font-size: 2.5rem;
   margin-bottom: 40px;
-  color: #00c3ff;
+  color: #ff0000c9;
 }
 .featured-grid {
   display: grid;
@@ -174,12 +217,12 @@ h2 {
 
 /* Footer */
 footer {
-  background: #111;
+  background: #3e3e3e;
   text-align: center;
   padding: 25px;
   font-size: 0.9rem;
-  color: #aaa;
-  margin-top: 60px;
+  color: #c0c0c0;
+  margin-top: 75px;
   border-top: 1px solid #222;
 }
 
