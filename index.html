@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Velacore Studios | Official Website</title>
+  
+  <!-- Meta -->
+  <meta name="description" content="Velacore Studios - Creating Worlds. Inspiring Players. Redefining Games. Discover our games and join the journey.">
+  <meta property="og:title" content="Velacore Studios">
+  <meta property="og:description" content="Creating Worlds. Inspiring Players. Redefining Games.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="images/hero-bg.jpg">
+  <meta property="og:url" content="https://yourdomain.com">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png">
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo">VELACORE</div>
+    <nav id="nav" aria-label="Main Navigation">
+      <a href="index.html" class="active">Home</a>
+      <a href="games.html">Games</a>
+      <a href="about.html">About</a>
+      <a href="careers.html">Careers</a>
+      <a href="contact.html" class="btn">Contact</a>
+    </nav>
+    <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu">☰</button>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero" role="banner">
+      <div class="hero-overlay">
+        <div class="hero-text">
+          <h1>Velacore Studios</h1>
+          <p>Creating Worlds. Inspiring Players. Redefining Games.</p>
+          <a href="games.html" class="btn-primary">Explore Our Games</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Section -->
+    <section class="featured">
+      <h2>Featured Games</h2>
+      <div class="featured-grid">
+        <article class="featured-card">
+          <img src="project-nova.png" alt="Screenshot of Project Nova">
+          <h3>Unseen (W.I.P)</h3>
+        </article>
+        <article class="featured-card">
+          <img src="mindshift.png" alt="Screenshot of Mindshift">
+          <h3>W.I.P</h3>
+        </article>
+        <article class="featured-card">
+          <img src="shadow-quest.png" alt="Screenshot of Shadow Quest">
+          <h3>Plush Haven (W.I.P)</h3>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Velacore Studios. All Rights Reserved.</p>
+  </footer>
+
+  <!-- Script -->
+  <script>
+    // Mobile nav toggle
+    const toggle = document.getElementById('menu-toggle');
+    const nav = document.getElementById('nav');
+    toggle.addEventListener('click', () => {
+      nav.classList.toggle('show');
+    });
+  </script>
+</body>
+</html>
+
